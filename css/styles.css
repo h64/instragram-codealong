@@ -1,0 +1,84 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.blue-background {
+    background-image: linear-gradient(#1c5380, #06365f);
+    height: 35%;
+    width: 100vw;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.grid-container {
+    margin: auto;
+    padding-top: 10vh;
+    width: 60vw;
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+        "phone top-right"
+        "phone middle-right"
+        "phone bottom-right";
+    grid-gap: 3%;
+}
+
+div {
+    /* border: 2px solid orange; */
+}
+
+.grid-phone {
+    grid-area: phone;
+}
+
+.grid-logo {
+    grid-area: top-right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid-text {
+    grid-area: middle-right;
+    background-image: url("../img/frame.png");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    padding: 5%;
+}
+
+.grid-icons {
+    grid-area: bottom-right;
+}
+
+ul {
+    text-align: center;
+}
+li {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+}
+
+button {
+    /* background-color: blue; */
+    background-image: linear-gradient(#1c5380, #06365f);
+    color: white;
+    /* border-color: #06365f; */
+    border:none;
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+}
